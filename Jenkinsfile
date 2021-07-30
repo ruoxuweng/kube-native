@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Build') {
             environment {
-                MSR_ACCESS_KEY = credentials('jenkins-msr-access-token')
+                MSR_ACCESS_KEY = credentials('03818956-e0dd-40d9-8010-10c60f4db602')
         MAJORMINOR = '0.0'
             }
             steps {
