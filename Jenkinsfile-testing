@@ -3,13 +3,13 @@ pipeline {
     agent any    
     
     environment {
-        MSR_FQDN_PORT='<registry dynamic DNS>:4443'
+        MSR_FQDN_PORT='fmhdsagwnswjmybyp-2qtac556tyjufmasg.labs.strigo.io:4443'
     }
 
     stages {
         stage('Unit') {
             environment {
-                MSR_ACCESS_KEY = credentials('jenkins-msr-access-token')
+                MSR_ACCESS_KEY = credentials('03818956-e0dd-40d9-8010-10c60f4db602')
             }
             steps {
                 sh 'docker --context=testserver login -u jenkins -p ${MSR_ACCESS_KEY} ${MSR_FQDN_PORT}'
